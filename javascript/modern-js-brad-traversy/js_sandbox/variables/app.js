@@ -1,14 +1,13 @@
-// var, let, const
-// var name = "John Doe";
-// console.log(name);
+var a = 1;
+let b = 2;
+const c = 3;
 
-// name = "Steve Smith";
-// console.log(name);
+if (true) {
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  
+  console.log("If escope ", a, b, c);
+}
 
-// Init var
-// var greeting;
-// console.log(greeting);
-
-// greeting = 'Hello';
-// console.log(greeting);
-
+console.log("Global escope ", a, b, c);
