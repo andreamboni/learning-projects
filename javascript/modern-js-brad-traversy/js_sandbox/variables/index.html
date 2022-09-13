@@ -8,6 +8,33 @@
   </head>
   <body>
     <h1>JavaScript Sandbox: Section 2</h1>
-    <script src="app.js"></script>
+    <a class="aloo" href="#">Button</a>
+    <script>
+      document.querySelector(".aloo").addEventListener("click", onClick);
+
+      function onClick(event) {
+        var outraMensagem = "Também deu certo";
+        let mensagem = "Deu certo";
+        let oi = "oi";
+
+        outraFuncao();
+
+        console.log(mensagem);
+        console.log(outraMensagem);
+
+        outraFuncao();
+      }
+
+      oi = "tchau";
+      outraMensagem = "Vamos ver se vai dar certo";
+      mensagem = "Acho que vai dar certo";
+
+      function outraFuncao() {
+        console.log("aloooo");
+        console.log(oi);
+        console.log(outraMensagem);
+        console.log(mensagem);
+      }
+    </script>
   </body>
 </html>

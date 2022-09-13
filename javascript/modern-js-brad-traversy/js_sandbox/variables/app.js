@@ -1,13 +1,22 @@
-var a = 1;
-let b = 2;
-const c = 3;
+document.querySelector(".aloo").addEventListener("click", onClick);
 
-if (true) {
-  var a = 4;
-  let b = 5;
-  const c = 6;
-  
-  console.log("If escope ", a, b, c);
+function onClick(event) {
+  var outraMensagem = "Também deu certo";
+  let mensagem = "Deu certo";
+
+  outraFuncao();
+
+  console.log(mensagem);
+  console.log(outraMensagem);
+
+  outraFuncao();
 }
 
-console.log("Global escope ", a, b, c);
+mensagem = "Acho que vai dar certo";
+outraMensagem = "Vamos ver se vai dar certo";
+
+function outraFuncao() {
+  console.log("aloooo");
+  console.log(outraMensagem);
+  console.log(mensagem);
+}

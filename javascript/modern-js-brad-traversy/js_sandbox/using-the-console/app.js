@@ -29,4 +29,4 @@ console.time('Hello'); // Começa a conta aqui
   console.log("Hello World");
   console.log("Hello World");
 
-console.timeEnd('Hello'); // Para aqui
+console.timeEnd('Hello'); // Para aqui    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
