@@ -14,7 +14,7 @@
       integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9"
       crossorigin="anonymous"
     />
-    <title>Flights List</title>
+    <title>Flight List</title>
   </head>
   <body>
     <div class="container">
@@ -26,8 +26,24 @@
               <div class="row">
                 <form id="flight-form">
                   <div class="input-field col s12">
-                    <input type="text" name="flight" id="flight" />
-                    <label for="flight">New Flight</label>
+                    <input type="text" name="departure" id="departure" class="form-value" />
+                    <label for="departure">Departure</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input type="text" name="arrival" id="arrival" class="form-value" />
+                    <label for="arrival">Arrival</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input type="text" name="flightClass" id="flightClass" class="form-value" />
+                    <label for="arrflightClassival">Flight Class</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input type="text" name="terminal" id="terminal" class="form-value" />
+                    <label for="terminal">Terminal</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input type="text" name="flightNumber" id="flightNumber" class="form-value" />
+                    <label for="flightNumber">Flight Number</label>
                   </div>
                   <input type="submit" value="Add Flight" class="btn" />
                 </form>
@@ -45,8 +61,7 @@
           </div>
         </div>
       </div>
-    </div>
-
+    </div> 
     <script
       src="https://code.jquery.com/jquery-3.6.1.js"
       integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
