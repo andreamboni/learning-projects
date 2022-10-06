@@ -50,7 +50,7 @@
 .photo-grid {
   width: 900px;
   display: flex;
-  justify-content: center1;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
 }
