@@ -1,9 +1,10 @@
 :root {
+  --my-green: #009879;
   --primary-blue: #d6e9fe;
   --secondary-blue: #5995da;
   --primary-grey: #5d6063;
   --secondary-grey: #eaedf0;
-  --font-color-google: #fff;
+  --my-white: #fff;
   --background-color-google: #202124;
   --border-color-google: #5f6368;
 }
@@ -15,64 +16,149 @@
 }
 
 body {
-  background-color: var(--secondary-blue);
-  color: var(--font-color-google);
+  background-color: var(--secondary-grey);
+  color: var(--my-white);
   font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.3;
 }
 
+a {
+  color: var(--my-white);
+  text-decoration: none;
+}
+
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--my-green);
   border-bottom: 1px solid var(--border-color-google);
 
   width: 100%;
-  padding: 25px;
+  padding: 15px;
 }
 
-.box-container {
-  background-color: var(--primary-blue);
-  height: 795px;
-  width: 100%;
+.menu {
+  display: flex;
+}
+
+.menu li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.menu li a {
+  font-weight: bold;
+
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.menu li a:hover {
+  background-color: var(--primary-grey);
+}
+
+.welcome-container {
+  height: 600px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-size: 30px;
+  font-weight: bold;
+  color: #202124;
 }
 
-.boxes {
+.table-container,
+.form-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  
-  margin: 300px;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.box {
+.flight-list-table {
+  border-collapse: collapse;
+}
+
+.flight-list-table,
+.add-flight-form {
+  text-align: center;
+  color: var(--primary-grey);
+  background-color: #f6f7f8;
+  border: 1px solid #d6d9dc;
+  border-radius: 5px;
+  
+  width: 100%;
+  margin: 20px;
+  padding: 50px;
+}
+
+
+
+.flight-list-table thead tr {
+  background-color: var(--my-green);
+  color: var(--my-white);
+}
+
+.flight-list-table th,
+.flight-list-table td {
+  padding: 10px;
+  margin: 30px;
+}
+
+.flight-list-table tbody tr:nth-of-type(even) {
+  background-color: #ebebeb;
+}
+
+.add-flight-form {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.form-row input[type="text"] {
+  background-color: #ffffff;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  width: 50%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.button-container {
   display: flex;
   justify-content: center;
- 
-  background-color: var(--secondary-blue);
-  border: 1px solid var(--border-color-google);
-  border-radius: 5px;
-
-  width: 300px;
-  padding: 50px;
-  margin: 30px 0;
+  flex-direction: column;
+  
+  margin: 0 20px;
 }
 
-.box:hover {
-  background-color: red;
+.basic-bg {
+  background-color: var(--my-green);
+  color: var(--my-white);
+  border-radius: 5px;
+  
+  font-size: 16px;
+  font-weight: bold;
+  
+  padding: 20px;
+}
+
+.basic-bg:hover {
+  background-color: var(--primary-grey);
   cursor: pointer;
 }
 
 .footer {
   position: fixed;
-  border-top: 1px solid var(--border-color-google);
   bottom: 0;
   left: 0;
   
+  background-color: var(--my-green);
+  border-top: 1px solid var(--border-color-google);
+
   width: 100%;
   padding: 25px;
 }
@@ -91,4 +177,45 @@ body {
   justify-content: space-between;
   align-items: center;
 }
- */
+*/
+
+/* Bom exercício de posicionamento */
+/* 
+.box-container {
+  background-color: var(--primary-blue);
+  height: 795px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: space;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  
+
+  margin: 300px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  background-color: var(--secondary-blue);
+  border: 1px solid var(--border-color-google);
+  border-radius: 5px;
+
+  width: 50%;
+  padding: 50px;
+  margin: 30px 0;
+}
+
+.box:hover {
+  background-color: red;
+  cursor: pointer;
+} */
