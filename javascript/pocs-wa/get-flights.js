@@ -16,6 +16,7 @@ function getFlights(event) {
       output += `<td>${flight.flightClass}`;
       output += `<td>${flight.terminal}`;
       output += `<td>${flight.flightNumber}`;
+      output += `<td><button class="delete-flight-button">Delete</button>`
       output += `</tr>`;
     });
 
@@ -24,19 +25,3 @@ function getFlights(event) {
   });
 }
 
-// function getFlights(event) {
-//   console.log("aloo");
-
-//   const xhr = new XMLHttpRequest();
-//   xhr.open("GET", "", true);
-
-//   xhr.onload = function () {
-//     if (this.status === 200) {
-
-//     }
-//   };
-
-//   xhr.send();
-
-//   event.preventDefault();
-// }
