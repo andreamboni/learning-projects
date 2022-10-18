@@ -1,3 +1,5 @@
+const http = new httpLib;
+
 const queryString = location.search.substring(1).split("|");
 const flight = {
   id: queryString[0],
@@ -7,9 +9,6 @@ const flight = {
   terminal: queryString[4],
   flightNumber: queryString[5],
 };
-
-console.log("flight", flight);
-console.log("flight.arrival", flight.arrival);
 
 let output = "";
 
@@ -27,7 +26,7 @@ output += `<div class="form-row">
           </div>`;
 output += `<div class="form-row">
             <label for="flight-class">Flight Class</label>
-            <input type="text" name="flight-class" id="flight-class" value="${flight.flightClass}">
+            <input type="text" name="flightClass" id="flightClass" value="${flight.flightClass}">
           </div>`;
 output += `<div class="form-row">
             <label for="terminal">Terminal</label>
@@ -35,9 +34,32 @@ output += `<div class="form-row">
           </div>`;
 output += `<div class="form-row">
             <label for="flight-number">Flight Number</label>
-            <input type="text" name="flight-number" id="flight-number" value="${flight.flightNumber}">
+            <input type="text" name="flight-number" id="flightNumber" value="${flight.flightNumber}">
           </div>`;
-
 
 let editForm = document.querySelector("form");
 editForm.innerHTML = output;
+
+document
+  .querySelector(".edit-flight-button")
+  .addEventListener("click", editFlight);
+
+function editFlight() {
+  const request = {
+    departure: departure.value,
+    arrival: arrival.value,
+    flightClass: flightClass.value,
+    terminal: terminal.value,
+    flightNumber: flightNumber.value,
+  };
+
+  console.log("PUT Request", request);
+
+  http.put("http://localhost:8080/flight/", id.value, request, function(response) {
+    console.log(response)
+
+    window.location.href = "./get-flights.html"
+  })
+
+}
+

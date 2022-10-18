@@ -18,7 +18,7 @@ function addFlight(event) {
     "flightNumber": flightNumber.value
   };
 
-  console.log("Request", request)
+  console.log("POST Request", request)
 
   http.post('http://localhost:8080/flight', request, function(response) {
     console.log(response)
