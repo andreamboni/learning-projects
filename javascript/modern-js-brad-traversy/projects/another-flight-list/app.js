@@ -11,6 +11,8 @@ function getFlights(event) {
   xhr.onload = function () {
 
     if (this.status === 200) {
+      console.log("André Amboni");
+
       const response = JSON.parse(this.responseText);
       
       response.forEach(function(flight) {
